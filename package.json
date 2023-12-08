@@ -3,5 +3,17 @@
   "packageManager": "yarn@3.6.0",
   "dependencies": {
     "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "watch": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "repl": "ts-node -i -e 'import \"./src/index\"'"
   }
 }

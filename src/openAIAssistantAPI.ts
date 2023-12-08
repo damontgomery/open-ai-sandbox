@@ -14,7 +14,7 @@ export const logThreadMessages = (
     })
   })
 
-export const getAssistantResponse = (
+export const getRunResponse = (
   {
     threadId,
     runId,
@@ -32,7 +32,7 @@ export const getAssistantResponse = (
               clearInterval(runChecker)
             }
 
-            if (run.status === 'completed') {
+            if (['completed', 'requires_action'].includes(run.status)) {
               resolve(run)
             }
 

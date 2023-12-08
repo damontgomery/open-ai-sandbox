@@ -1,0 +1,70 @@
+OPENAI_API_KEY: [REDACTED]
+toolCalls [
+  {
+    id: 'call_ohFnhcBOMa76mi7FavB8GolT',
+    type: 'function',
+    function: { name: 'getCurrentLocation', arguments: '{}' }
+  }
+]
+functionResponse {"lat":1.2,"lon":3.4}
+toolOutputs [
+  {
+    tool_call_id: 'call_ohFnhcBOMa76mi7FavB8GolT',
+    output: '{"lat":1.2,"lon":3.4}'
+  }
+]
+toolCalls [
+  {
+    id: 'call_K0JktfJWrEXXNEeu8GBf63MW',
+    type: 'function',
+    function: { name: 'getCurrentWeather', arguments: '{"lat":1.2,"lon":3.4}' }
+  }
+]
+functionResponse The weather in 1.2, 3.4 is sunny.
+toolOutputs [
+  {
+    tool_call_id: 'call_K0JktfJWrEXXNEeu8GBf63MW',
+    output: 'The weather in 1.2, 3.4 is sunny.'
+  }
+]
+threadMessages
+{
+  id: 'msg_kPbMSOqzcGi795ZZooXmfQfC',
+  object: 'thread.message',
+  created_at: 1702078080,
+  thread_id: 'thread_jhsWf0z87fPTceV3ijjcgijq',
+  role: 'assistant',
+  content: [ { type: 'text', text: [Object] } ],
+  file_ids: [],
+  assistant_id: 'asst_yLLeCZPZyymHzJRJsVoI6rmt',
+  run_id: 'run_Wzbh8Cf4PU6WytXSeimt66Qh',
+  metadata: {}
+} [
+  {
+    type: 'text',
+    text: {
+      value: 'The current weather in your location is sunny. If you need more information such as temperature, wind speed, or any other specific details, feel free to ask!',
+      annotations: []
+    }
+  }
+]
+{
+  id: 'msg_y4Rr8ttKaanj1iQ0jVrUFiFV',
+  object: 'thread.message',
+  created_at: 1702078074,
+  thread_id: 'thread_jhsWf0z87fPTceV3ijjcgijq',
+  role: 'user',
+  content: [ { type: 'text', text: [Object] } ],
+  file_ids: [],
+  assistant_id: null,
+  run_id: null,
+  metadata: {}
+} [
+  {
+    type: 'text',
+    text: {
+      value: 'What is the weather in my current location?',
+      annotations: []
+    }
+  }
+]

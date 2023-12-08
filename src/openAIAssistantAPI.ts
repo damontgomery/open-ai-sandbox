@@ -109,6 +109,7 @@ export const getRunResponse = (
                 'expired'
               ].includes(run.status)
             ) {
+              console.log('run', run)
               reject(run)
             }
           })
